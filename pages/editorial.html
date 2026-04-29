@@ -8,93 +8,290 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/styles.css" />
+
+  <style>
+    .editorial-page {
+      padding: 56px 0 96px;
+    }
+
+    .editorial-layout {
+      display: grid;
+      grid-template-columns: 340px minmax(0, 1fr);
+      gap: 0;
+      min-height: 980px;
+      border: 1px solid rgba(22, 22, 22, 0.08);
+      border-radius: 0;
+      overflow: hidden;
+      background: #f3f1ee;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+    }
+
+    .editorial-sidebar {
+      background: #0a0a0a;
+      color: #e2d1c1;
+      padding: 28px 26px 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      border-right: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .editorial-sidebar h2 {
+      margin: 0 0 28px;
+      color: #f1ebe4;
+      font-size: 1.1rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    .issue-item {
+      text-align: center;
+      padding: 18px 0 34px;
+    }
+
+    .issue-number {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 6rem;
+      line-height: 0.9;
+      color: #cfbaa7;
+      margin-bottom: 16px;
+      font-weight: 600;
+    }
+
+    .issue-label {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      color: #f4efe8;
+      font-size: 1rem;
+      line-height: 1.15;
+      letter-spacing: 0.04em;
+    }
+
+    .issue-label strong {
+      font-weight: 700;
+    }
+
+    .editorial-main {
+      background: #efeeec;
+      padding: 28px 34px 36px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .editorial-title {
+      margin: 0 0 24px;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(4.5rem, 8vw, 7rem);
+      line-height: 0.88;
+      letter-spacing: -0.04em;
+      color: #c6b29f;
+      font-weight: 600;
+    }
+
+    .editorial-parts {
+      display: grid;
+      grid-template-rows: repeat(4, minmax(145px, auto));
+      gap: 34px;
+      margin-top: 8px;
+    }
+
+    .editorial-part {
+      display: grid;
+      grid-template-columns: 64px 1fr;
+      gap: 18px;
+      align-items: start;
+      padding-top: 4px;
+    }
+
+    .part-number {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 2.4rem;
+      line-height: 1;
+      color: #c6b29f;
+      font-weight: 600;
+      text-align: center;
+      padding-top: 4px;
+    }
+
+    .part-content h3 {
+      margin: 0 0 10px;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 1.45rem;
+      line-height: 1.05;
+      color: #161616;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+
+    .part-content p {
+      margin: 0;
+      font-size: 1.05rem;
+      line-height: 1.35;
+      letter-spacing: 0.08em;
+      color: #161616;
+      max-width: 42ch;
+    }
+
+    .editorial-note {
+      margin-top: 28px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(22,22,22,0.08);
+      color: #6c665f;
+      font-size: 0.94rem;
+      letter-spacing: 0.04em;
+    }
+  </style>
 </head>
 <body>
-  
-<div class="progress" data-progress></div>
-<header class="site-header">
-  <div class="container nav-wrap">
-    <a class="brand" href="../index.html">
-      <strong>Student News</strong>
-      <span>UCL social sciences magazine</span>
-    </a>
-    <nav class="nav">
-      <a href="../index.html" class="">Home</a>
-      <a href="editorial.html" class="active">Editorial</a>
-      <a href="news.html" class="">News</a>
-      <a href="revisiting.html" class="">Interviews</a>
-      <a href="narrative.html" class="">Narrative</a>
-      <a href="art.html" class="">Art</a>
-      <a href="references.html" class="">References</a>
-    </nav>
-  </div>
-</header>
+  <div class="progress" data-progress></div>
 
-  <main>
-    <section class="page-hero">
-      <div class="reading fade">
-        <div class="eyebrow">Opening pages</div>
-        <h1 class="display page-title">Editorial</h1>
-        <p class="lead">Several comments to the contents. </p>
-      </div>
-    </section>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="../index.html">
+        <strong>Student News</strong>
+        <span>UCL social sciences magazine</span>
+      </a>
+      <nav class="nav">
+        <a href="../index.html">Home</a>
+        <a href="editorial.html" class="active">Editorial</a>
+        <a href="news.html">News</a>
+        <a href="revisiting.html">Interviews</a>
+        <a href="narrative.html">Narrative</a>
+        <a href="art.html">Art</a>
+        <a href="references.html">References</a>
+      </nav>
+    </div>
+  </header>
 
-    <section class="section" style="padding-top: 22px;">
-      <div class="container page-shell">
-        <aside class="toc glass fade">
-          <h3>On this page</h3>
-          <a href="#issue" data-toc-link>Issue statement</a>
-          <a href="#contents" data-toc-link>Contents</a>
-          <a href="#preview" data-toc-link>Preview</a>
+  <main class="editorial-page">
+    <div class="container">
+      <section class="editorial-layout">
+
+        <!-- Left column -->
+        <aside class="editorial-sidebar">
+          <h2>IN THIS NUMBER :</h2>
+
+          <div class="issue-item">
+            <div class="issue-number">1</div>
+            <div class="issue-label">
+              <strong>News:</strong> Transformation of Black Queerspace<br>
+              Struggles of Black Transgender Women
+            </div>
+          </div>
+
+          <div class="issue-item">
+            <div class="issue-number">2</div>
+            <div class="issue-label">
+              <strong>Revisiting:</strong> Color-Blind Racism
+            </div>
+          </div>
+
+          <div class="issue-item">
+            <div class="issue-number">3</div>
+            <div class="issue-label">
+              <strong>Creative:</strong> Tayo and Ryry<br>
+              A History of Two Zebras
+            </div>
+          </div>
+
+          <div class="issue-item" style="padding-bottom:0;">
+            <div class="issue-number">4</div>
+            <div class="issue-label">
+              <strong>Link it to art:</strong><br>
+              Manet’s Olympia and intersectionality
+            </div>
+          </div>
         </aside>
 
-        <article class="content-card fade">
-          <h2 id="issue" data-section-heading>Issue statement</h2>
-          <p class="smallcaps">Social Sciences Magazine for Students</p>
-          <div class="pull"><p>Link it to art! Manet’s <em>Olympia</em> and intersectionality.</p></div>
-          <p>This issue brings together editorial writing, student news, critical reflection, narrative, and visual analysis to explore intersectionality as both a concept and a lived experience.</p>
-          <p>Contributors: Elise Crambes, Jaime Gu, Faidda Gure, and Max Lerner.</p>
+        <!-- Right column -->
+        <section class="editorial-main">
+          <h1 class="editorial-title">EDITORIAL</h1>
 
-          <h2 id="contents" data-section-heading>In this number</h2>
-          <p><strong>Revisiting: Color-Blind Racism</strong></p>
-          <p><strong>Tayo and Ryry — A History of Two Zebras</strong></p>
-          <p><strong>News: Transformation of Black Queer Spaces</strong></p>
-          <p><strong>News: Struggles of Black Transgender Women</strong></p>
-          <p><strong>Intersectionality in Art: Manet’s <em>Olympia</em></strong></p>
+          <div class="editorial-parts">
+            <article class="editorial-part">
+              <div class="part-number">1</div>
+              <div class="part-content">
+                <h3>News</h3>
+                <p>
+                  Black queer students often face exclusion, highlighting the urgent need for inclusive
+                  environments that reflect their intersectional identities. Additionally, disproportionate
+                  violence against Black transgender women shows the need for targeted action, with activists
+                  calling for systemic change and greater support for Black trans-led initiatives.
+                </p>
+              </div>
+            </article>
 
-          <h2 id="preview" data-section-heading>Preview</h2>
-          <p>Tayo and Ryry are innocent childhood friends, but everything changes once they are enrolled in school. The story explores how social divisions are not simply seen on the surface, but filed away in records and written into history.</p>
-          <p>Two decades after Eduardo Bonilla-Silva’s foundational text, the revisiting essay returns to color-blind racism through a contemporary student lens, asking what has changed and what has not.</p>
-        </article>
-      </div>
-    </section>
+            <article class="editorial-part">
+              <div class="part-number">2</div>
+              <div class="part-content">
+                <h3>Revisiting</h3>
+                <p>
+                  Two decades after Eduardo Bonilla-Silva’s foundational text, this series of interviews with
+                  college students rethinks the ways that color-blind racism has both evolved and remained
+                  consistent with the times.
+                </p>
+              </div>
+            </article>
+
+            <article class="editorial-part">
+              <div class="part-number">3</div>
+              <div class="part-content">
+                <h3>Creative</h3>
+                <p>
+                  Tayo and Ryry are innocent childhood friends, but all changes the moment they are enrolled
+                  in school. This short story explores how divisions between us are not drawn on our skin,
+                  but filed away in ledgers and written into history.
+                </p>
+              </div>
+            </article>
+
+            <article class="editorial-part">
+              <div class="part-number">4</div>
+              <div class="part-content">
+                <h3>Link it to art</h3>
+                <p>
+                  Manet’s world-famous <em>Olympia</em> has long been associated with shock. Many aspects of
+                  the painting have been discussed in isolation, but rarely brought into relation with one
+                  another through the lens of intersectionality.
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <div class="editorial-note">
+            A concise editorial overview of the four sections in this issue.
+          </div>
+        </section>
+      </section>
+    </div>
   </main>
-  
-<footer class="footer">
-  <div class="container footer-grid">
-    <div>
-      <h4>About</h4>
-      <p>Intersectionality is the interconnected nature of social categorizations such as race, class, and gender as they apply to a given individual or group, regarded as creating overlapping and interdependent systems of discrimination or disadvantage</p>
-    </div>
-    <div>
-      <h4>Sections</h4>
-      <ul>
-        <li><a href="editorial.html">Editorial</a></li>
-        <li><a href="news.html">News</a></li>
-        <li><a href="revisiting.html">Interviews</a></li>
-        <li><a href="narrative.html">Narrative</a></li>
-        <li><a href="art.html">Art</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Format</h4>
-      <ul>
-        <li>Static HTML with technical support of GitHub</li>
-      </ul>
-    </div>
-  </div>
-</footer>
-<script src="../assets/script.js"></script>
 
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <h4>About</h4>
+        <p>Intersectionality is the interconnected nature of social categorizations such as race, class, and gender as they apply to a given individual or group, regarded as creating overlapping and interdependent systems of discrimination or disadvantage</p>
+      </div>
+      <div>
+        <h4>Sections</h4>
+        <ul>
+          <li><a href="editorial.html">Editorial</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="revisiting.html">Interviews</a></li>
+          <li><a href="narrative.html">Narrative</a></li>
+          <li><a href="art.html">Art</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Format</h4>
+        <ul>
+          <li>Static HTML with technical support of GitHub</li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/script.js"></script>
 </body>
 </html>
+``
